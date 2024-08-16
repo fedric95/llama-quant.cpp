@@ -14,4 +14,6 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Docker build container
         run: docker build -f Dockerfile -t hello_docker .
+      - name: Docker push container
+        run: docker push ghcr.io/fedric95/hello_docker:latest
       - run: echo "🍏 This job's status is ${{ job.status }}."
