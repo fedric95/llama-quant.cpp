@@ -22,6 +22,3 @@ cd llama.cpp
 git reset --hard $LLAMA_CPP_VERSION
 make GGML_CUDA=$LLAMA_CPP_CUDA
 cd ..
-git lfs install
-pip install -r requirements.txt
-./llama.cpp/scripts/get-wikitext-2.sh
