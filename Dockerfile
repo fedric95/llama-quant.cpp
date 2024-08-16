@@ -12,4 +12,4 @@ RUN apt-get update && apt-get upgrade -y \
 ENV CUDA_DOCKER_ARCH=all
 
 # Install depencencies
-RUN python3 -m pip install --upgrade pip pytest cmake scikit-build setuptools fastapi uvicorn sse-starlette pydantic-settings starlette-contex
+RUN python3 -m pip install --upgrade pip cmake setuptools
