@@ -14,6 +14,12 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: Docker build container
         run: docker build -f Dockerfile -t ghcr.io/fedric95/hello_docker:latest .
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{github.actor}}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - name: Docker push container
         run: docker push ghcr.io/fedric95/hello_docker:latest
       - run: echo "🍏 This job's status is ${{ job.status }}."
