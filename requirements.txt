@@ -1,3 +1,0 @@
-sentencepiece
-safetensors
-huggingface_hub[cli]
