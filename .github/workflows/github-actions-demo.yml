@@ -23,3 +23,4 @@ jobs:
       - name: Docker push container
         run: docker push ghcr.io/fedric95/hello_docker:latest
       - run: echo "🍏 This job's status is ${{ job.status }}."
+
