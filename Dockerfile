@@ -14,13 +14,9 @@ ENV CUDA_DOCKER_ARCH=all
 # Install depencencies
 RUN python3 -m pip install --upgrade pip cmake setuptools
 
-
 COPY . .
 
 ENV LLAMA_CPP_VERSION=b3583
-ENV BASE_MODEL_URL=https://huggingface.co/google/
-ENV BASE_MODEL_NAME=gemma-2-9b
-ENV BASE_MODEL_PRECISION=FP32
 ENV LLAMA_CPP_CUDA=1
 
 RUN chmod +x ./setup.sh && ./setup.sh
