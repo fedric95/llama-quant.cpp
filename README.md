@@ -15,4 +15,4 @@ g++ -o encode encode.cpp
 
 ## Measure performance
 
-./perplexity -m model -bf custom-test.bin --multiple choice
+./llama-perplexity -m model -bf custom-test.bin --multiple choice
